@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./Navbar.module.css";
+import avatarImage from "../../public/profile-avatar.png";
 
 const LINKS_LEFT = [
   { label: "Home", href: "#home" },
@@ -21,7 +22,7 @@ export default function Navbar() {
 
     const observer = new IntersectionObserver(
       ([entry]) => setIsScrolled(!entry.isIntersecting),
-      { threshold: 0 }
+      { threshold: 0 },
     );
 
     observer.observe(node);
@@ -45,10 +46,14 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <a href="#home" className={styles.avatarLink} aria-label="Back to top">
+          <a
+            href="#home"
+            className={styles.avatarLink}
+            aria-label="Back to top"
+          >
             <img
-              src="https://picsum.photos/seed/mira-voss-avatar/80/80"
-              alt=""
+              src={avatarImage}
+              alt="Artemii Barashkov"
               className={styles.avatar}
               width={40}
               height={40}
