@@ -1,6 +1,7 @@
 .hero {
   display: flex;
   align-items: center;
+  justify-content: center;
   min-height: 84dvh;
   padding: 0 24px;
 }
@@ -8,7 +9,11 @@
 .inner {
   width: 100%;
   max-width: var(--max-width);
-  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .headline {
@@ -40,31 +45,10 @@
   align-self: start;
   color: var(--accent-green);
   white-space: nowrap;
-  opacity: 0;
-  transform: translateY(-100%);
-  transition: opacity 450ms cubic-bezier(0.16, 1, 0.3, 1),
-    transform 450ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.accentWord.idle {
-  opacity: 0;
-  transform: translateY(-100%);
-}
-
-.accentWord.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.accentWord.exiting {
-  opacity: 0;
-  transform: translateY(100%);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .accentWord {
-    transition: none;
-  }
+.letter {
+  display: inline-block;
 }
 
 @media (max-width: 768px) {
