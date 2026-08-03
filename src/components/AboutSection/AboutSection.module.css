@@ -1,0 +1,123 @@
+.section {
+  padding: 112px 24px;
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 56px;
+  background: var(--accent-green-dark);
+  border-radius: var(--radius-card);
+  padding: 56px;
+  align-items: center;
+}
+
+.imageColumn {
+  position: relative;
+}
+
+.portrait {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius-card-sm);
+}
+
+.badge {
+  position: absolute;
+  top: -18px;
+  left: -18px;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-pill);
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 24px -8px rgb(20 20 20 / 0.35);
+}
+
+.textColumn {
+  color: #ffffff;
+}
+
+.eyebrow {
+  display: block;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgb(255 255 255 / 0.72);
+  margin-bottom: 14px;
+}
+
+.heading {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 34px;
+  margin-bottom: 22px;
+}
+
+.paragraph {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgb(255 255 255 / 0.9);
+  max-width: 52ch;
+  margin-bottom: 18px;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 12px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-dark);
+  background: var(--accent-orange);
+  border-radius: var(--radius-pill);
+  padding: 16px 32px;
+  white-space: nowrap;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 16px 32px -12px rgb(0 0 0 / 0.35);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 72px 20px;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 32px;
+  }
+
+  .portrait {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .badge {
+    top: -14px;
+    left: -14px;
+  }
+
+  .heading {
+    font-size: 28px;
+  }
+}

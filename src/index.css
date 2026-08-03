@@ -1,0 +1,91 @@
+:root {
+  /* Typography */
+  --font-display: "Clash Grotesk", "Poppins", sans-serif;
+  --font-body: "Poppins", sans-serif;
+
+  /* Color palette */
+  --bg-light: #ffffff;
+  --bg-muted: #f2f2f2;
+  --text-dark: #141414;
+  --text-muted: #6f6f6f;
+  --accent-green: #7fa88e;
+  --accent-green-dark: #4c6b58;
+  --accent-pink: #f3c6ba;
+  --accent-orange: #f2a94e;
+
+  /* Shape system: pill for interactive, 24px for cards/media */
+  --radius-card: 24px;
+  --radius-card-sm: 20px;
+  --radius-pill: 999px;
+
+  --max-width: 1240px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.isVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

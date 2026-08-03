@@ -1,0 +1,44 @@
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 84dvh;
+  padding: 0 24px;
+}
+
+.inner {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.headline {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2.75rem, 6.4vw, 5.25rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--text-dark);
+  max-width: 18ch;
+}
+
+.line {
+  display: block;
+}
+
+.accentWord {
+  color: var(--accent-green);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 70dvh;
+    padding: 0 20px;
+  }
+
+  .headline {
+    font-size: clamp(2.25rem, 9vw, 3rem);
+    max-width: 14ch;
+  }
+}

@@ -1,0 +1,108 @@
+.footer {
+  background: var(--accent-pink);
+  padding: 96px 24px 64px;
+}
+
+.inner {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-pill);
+  object-fit: cover;
+  border: 2px solid var(--bg-light);
+  box-shadow: 0 4px 14px rgb(20 20 20 / 0.14);
+  margin-bottom: 32px;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: clamp(2rem, 4.6vw, 3.25rem);
+  line-height: 1.15;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+}
+
+.line {
+  display: block;
+}
+
+.paragraph {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgb(20 20 20 / 0.72);
+  max-width: 48ch;
+  margin-bottom: 32px;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-dark);
+  background: var(--accent-green);
+  border-radius: var(--radius-pill);
+  padding: 16px 36px;
+  white-space: nowrap;
+  margin-bottom: 64px;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 16px 32px -12px rgb(76 107 88 / 0.4);
+}
+
+.socials {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid rgb(20 20 20 / 0.35);
+  color: var(--text-dark);
+  transition: background-color 0.25s ease, color 0.25s ease,
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.socialLink:hover {
+  background: var(--accent-green-dark);
+  border-color: var(--accent-green-dark);
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 72px 20px 48px;
+  }
+
+  .heading {
+    font-size: clamp(1.75rem, 7vw, 2.25rem);
+  }
+}
