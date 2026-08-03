@@ -27,8 +27,44 @@
   display: block;
 }
 
+.wordStack {
+  display: inline-grid;
+  overflow: hidden;
+  height: 1.2em;
+  line-height: 1.2;
+  vertical-align: baseline;
+}
+
 .accentWord {
+  grid-area: 1 / 1;
+  align-self: start;
   color: var(--accent-green);
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity 450ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 450ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.accentWord.idle {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.accentWord.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.accentWord.exiting {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .accentWord {
+    transition: none;
+  }
 }
 
 @media (max-width: 768px) {
