@@ -4,14 +4,12 @@ import styles from "./ProjectCard.module.css";
 export default function ProjectCard({
   title,
   tags,
-  imageSeed,
-  imageAlt,
+  image,
+  alt,
   featured = false,
   delay = 0,
 }) {
   const [ref, isVisible] = useScrollReveal();
-  const width = featured ? 1400 : 900;
-  const height = featured ? 900 : 700;
 
   return (
     <article
@@ -22,12 +20,7 @@ export default function ProjectCard({
       style={{ transitionDelay: isVisible ? `${delay}ms` : "0ms" }}
     >
       <div className={styles.imageWrap}>
-        <img
-          src={`https://picsum.photos/seed/${imageSeed}/${width}/${height}`}
-          alt={imageAlt}
-          className={styles.image}
-          loading="lazy"
-        />
+        <img src={image} alt={alt} className={styles.image} loading="lazy" />
       </div>
       <div className={styles.meta}>
         <h3 className={styles.title}>{title}</h3>

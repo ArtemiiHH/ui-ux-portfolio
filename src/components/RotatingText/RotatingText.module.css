@@ -1,0 +1,52 @@
+.wrap {
+  display: inline-flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.2em;
+}
+
+.prefix {
+  white-space: pre;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  vertical-align: bottom;
+  color: var(--accent-green);
+  box-sizing: border-box;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.content {
+  display: inline-flex;
+  white-space: nowrap;
+  position: relative;
+}
+
+.word {
+  display: inline-flex;
+}
+
+.char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(100%);
+  will-change: transform, opacity;
+}
+
+.space {
+  white-space: pre;
+}

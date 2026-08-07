@@ -32,25 +32,6 @@
   display: block;
 }
 
-.wordStack {
-  display: inline-grid;
-  overflow: hidden;
-  height: 1.2em;
-  line-height: 1.2;
-  vertical-align: baseline;
-}
-
-.accentWord {
-  grid-area: 1 / 1;
-  align-self: start;
-  color: var(--accent-green);
-  white-space: nowrap;
-}
-
-.letter {
-  display: inline-block;
-}
-
 @media (max-width: 768px) {
   .hero {
     min-height: 70dvh;
