@@ -1,3 +1,4 @@
+import ChromaticWaves from "../ChromaticWaves/ChromaticWaves.jsx";
 import RotatingText from "../RotatingText/RotatingText.jsx";
 import styles from "./Hero.module.css";
 
@@ -6,6 +7,16 @@ const CYCLE_WORDS = ["websites", "products", "experiences"];
 export default function Hero() {
   return (
     <section id="home" className={styles.hero}>
+      <div className={styles.background} aria-hidden="true">
+        <ChromaticWaves
+          bgColor="#ffffff"
+          colors={["#f2f2f2", "#7fa88e66", "#4c6b5859"]}
+          cellSize={14}
+          frequency={2}
+          speed={2}
+          gamma={4}
+        />
+      </div>
       <div className={styles.inner}>
         <h1 className={styles.headline}>
           <span className={styles.line}>Hi I am Artemii,</span>
