@@ -1,19 +1,16 @@
-import Navbar from "./components/Navbar/Navbar.jsx";
-import Hero from "./components/Hero/Hero.jsx";
-import WorkSection from "./components/WorkSection/WorkSection.jsx";
-import AboutSection from "./components/AboutSection/AboutSection.jsx";
-import FooterCTA from "./components/FooterCTA/FooterCTA.jsx";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home/Home.jsx";
+import ProjectDetail from "./pages/ProjectDetail/ProjectDetail.jsx";
+import ScrollToHash from "./components/ScrollToHash/ScrollToHash.jsx";
 
 export default function App() {
   return (
-    <>
-      <Navbar />
-      <main>
-        <Hero />
-        <WorkSection />
-        <AboutSection />
-      </main>
-      <FooterCTA />
-    </>
+    <BrowserRouter>
+      <ScrollToHash />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/work/:slug" element={<ProjectDetail />} />
+      </Routes>
+    </BrowserRouter>
   );
 }

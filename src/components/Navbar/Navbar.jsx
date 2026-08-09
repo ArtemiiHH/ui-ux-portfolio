@@ -1,15 +1,16 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import avatarImage from "../../public/profile-avatar.png";
 
 const LINKS_LEFT = [
-  { label: "Home", href: "#home" },
-  { label: "Work", href: "#work" },
+  { label: "Home", href: "/#home" },
+  { label: "Work", href: "/#work" },
 ];
 
 const LINKS_RIGHT = [
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/#about" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar() {
@@ -39,15 +40,15 @@ export default function Navbar() {
           <ul className={styles.linkGroup}>
             {LINKS_LEFT.map((link) => (
               <li key={link.href}>
-                <a href={link.href} className={styles.link}>
+                <Link to={link.href} className={styles.link}>
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
 
-          <a
-            href="#home"
+          <Link
+            to="/#home"
             className={styles.avatarLink}
             aria-label="Back to top"
           >
@@ -58,14 +59,14 @@ export default function Navbar() {
               width={40}
               height={40}
             />
-          </a>
+          </Link>
 
           <ul className={styles.linkGroup}>
             {LINKS_RIGHT.map((link) => (
               <li key={link.href}>
-                <a href={link.href} className={styles.link}>
+                <Link to={link.href} className={styles.link}>
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

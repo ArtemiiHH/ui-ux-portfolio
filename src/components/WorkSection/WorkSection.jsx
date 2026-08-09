@@ -1,6 +1,6 @@
 import ProjectCard from "../ProjectCard/ProjectCard.jsx";
 import styles from "./WorkSection.module.css";
-import tpgmsMockup from "../../public/tpgms-mockup.png";
+import { projects } from "../../data/projects.js";
 
 export default function WorkSection() {
   return (
@@ -15,27 +15,18 @@ export default function WorkSection() {
         </div>
 
         <div className={styles.grid}>
-          <ProjectCard
-            title="TPGMS Website Redesign"
-            tags={["Fintech", "Mobile App", "UX Research"]}
-            image={tpgmsMockup}
-            alt="TPGMS website redesign mockup"
-            featured
-          />
-          <ProjectCard
-            title="Loom Studio"
-            tags={["Branding", "Design System"]}
-            image={tpgmsMockup}
-            alt="Loom Studio brand identity and design system pages"
-            delay={0}
-          />
-          <ProjectCard
-            title="Petal"
-            tags={["Health", "Mobile App"]}
-            image={tpgmsMockup}
-            alt="Petal wellness app screens"
-            delay={80}
-          />
+          {projects.map((project, index) => (
+            <ProjectCard
+              key={project.slug}
+              slug={project.slug}
+              title={project.card.title}
+              tags={project.card.tags}
+              image={project.card.image}
+              alt={project.card.alt}
+              featured={project.card.featured}
+              delay={project.card.featured ? 0 : index * 80}
+            />
+          ))}
         </div>
       </div>
     </section>
