@@ -7,7 +7,7 @@ export const projects = [
       title: "TPGMS — Website Redesign",
       subtitle:
         "Rebuilding a legacy forex marketing platform's web presence from the ground up.",
-      tags: ["UI Design", "Web Design", "Fintech", "B2B"],
+      tags: ["UI Design", "Web Design", "Fintech"],
       image: tpgmsMockup,
       alt: "TPGMS website redesign mockup",
       featured: true,

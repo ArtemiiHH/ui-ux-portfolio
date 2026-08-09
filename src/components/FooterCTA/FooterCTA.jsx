@@ -1,5 +1,5 @@
 import styles from "./FooterCTA.module.css";
-import avatarImage from "../../public/profile-avatar.png";
+import avatarImage from "../../public/profile-avatar-with-bg.png";
 
 const SOCIALS = [
   { label: "LinkedIn", href: "https://linkedin.com" },
@@ -16,7 +16,7 @@ export default function FooterCTA() {
           <h2 className={styles.heading}>
             Open to new opportunities or side projects, feel free to drop me
             a line{" "}
-            <a href="mailto:hey@artemii.design" className={styles.emailLink}>
+            <a href="mailto:artemii.barashkov.dev@gmail.com" className={styles.emailLink}>
               hey@artemii.design
             </a>
           </h2>
@@ -59,7 +59,7 @@ export default function FooterCTA() {
         </div>
 
         <p className={styles.copyright}>
-          © {year} Artemii Barashkov — Based in Lisbon, Portugal
+          © {year} Artemii Barashkov — Based in Limassol, Cyprus
         </p>
       </div>
     </footer>
