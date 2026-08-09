@@ -19,7 +19,7 @@
 
 .navbar.scrolled {
   background: rgb(255 255 255 / 0.72);
-  backdrop-filter: blur(14px) saturate(160%);
+  backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(14px) saturate(160%);
   box-shadow: 0 1px 0 rgb(20 20 20 / 0.06);
 }
