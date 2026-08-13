@@ -26,7 +26,7 @@ export default function AboutSection() {
             <span className={styles.eyebrow}>Behind the work</span>
             <h2 className={styles.heading}>About me</h2>
             <p className={styles.paragraph}>
-              I am a product designer based in Lisbon, working with startups and
+              I am a UI/UX Designer based in Limassol, Cyprus, working with startups and
               small teams to turn rough ideas into interfaces people actually
               enjoy using. Most of my time goes into fintech and wellness
               products, though I take on a brand project when the fit feels
