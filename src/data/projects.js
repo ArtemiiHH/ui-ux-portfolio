@@ -18,8 +18,8 @@ export const projects = [
       subtitle:
         "A full visual and structural redesign of a legacy forex-industry platform offering SEO, SMM, marketing, and web analytics solutions.",
       role: "UI Designer, working within a project team",
-      timeline: "6 weeks",
-      tools: "Figma, Framer, Notion",
+      timeline: "3 weeks",
+      tools: "Figma",
       gallery: [
         {
           src: "https://picsum.photos/seed/tpgms-home/900/650",
