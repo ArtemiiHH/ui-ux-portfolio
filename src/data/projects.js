@@ -1,5 +1,17 @@
 import tpgmsMockup from "../public/tpgms-mockup.png";
 
+// Redesigned site
+import tpgmsLandingAfter from "../public/tpgms-landing-after.png";
+import tpgmsServicesAfter from "../public/Services.png";
+import tpgmsAboutAfter from "../public/About us.png";
+import tpgmsContactAfter from "../public/Contact Us.png";
+
+// Legacy site
+import tpgmsLandingBefore from "../public/tpgms-landing-before1.png";
+import tpgmsServicesBefore from "../public/tpgms-seo-before.png";
+import tpgmsAboutBefore from "../public/tpgms-marketing-before.png";
+import tpgmsContactBefore from "../public/tpgms-contact-before.png";
+
 export const projects = [
   {
     slug: "tpgms-website-redesign",
@@ -20,22 +32,82 @@ export const projects = [
       role: "UI Designer, working within a project team",
       timeline: "3 weeks",
       tools: "Figma",
+      galleryHeading: "The New Site",
+      galleryIntro:
+        "Four screens from the redesigned marketing site \u2014 homepage, services, about, and contact.",
       gallery: [
         {
-          src: "https://picsum.photos/seed/tpgms-home/900/650",
-          alt: "TPGMS homepage — mockup coming soon",
+          src: tpgmsLandingAfter,
+          alt: "TPGMS redesigned homepage",
         },
         {
-          src: "https://picsum.photos/seed/tpgms-services/900/650",
-          alt: "TPGMS services page — mockup coming soon",
+          src: tpgmsServicesAfter,
+          alt: "TPGMS redesigned services page",
         },
         {
-          src: "https://picsum.photos/seed/tpgms-analytics/900/650",
-          alt: "TPGMS analytics dashboard — mockup coming soon",
+          src: tpgmsAboutAfter,
+          alt: "TPGMS redesigned about us page",
         },
         {
-          src: "https://picsum.photos/seed/tpgms-mobile/900/650",
-          alt: "TPGMS responsive mobile views — mockup coming soon",
+          src: tpgmsContactAfter,
+          alt: "TPGMS redesigned contact page",
+        },
+      ],
+      beforeAfterHeading: "Before & After",
+      beforeAfterIntro:
+        "The same four pages next to the site they replaced. Left is the 2016 original, right is the redesign.",
+      beforeAfter: [
+        {
+          label: "Homepage",
+          note:
+            "The old homepage led with a stock word cloud and a headline about \u201cdesktops and mobiles\u201d that never said what TPGMS actually sells. The redesign opens on a branded hero, states the offer in one line, and gives the nav a single unmissable CTA.",
+          before: {
+            src: tpgmsLandingBefore,
+            alt: "Original TPGMS homepage with a stock word-cloud hero",
+          },
+          after: {
+            src: tpgmsLandingAfter,
+            alt: "Redesigned TPGMS homepage with a branded 3D hero",
+          },
+        },
+        {
+          label: "Services",
+          note:
+            "Every service had its own page \u2014 a banner image above a long column of grey text you had to read end to end to compare anything. All five offerings now share one page as numbered cards, each with a one-line promise and four scannable bullets.",
+          before: {
+            src: tpgmsServicesBefore,
+            alt: "Original TPGMS SEO page: banner image above a wall of body text",
+          },
+          after: {
+            src: tpgmsServicesAfter,
+            alt: "Redesigned TPGMS services page with five numbered service cards",
+          },
+        },
+        {
+          label: "About",
+          note:
+            "There was no about page at all. The company\u2019s story sat in a collapsed accordion at the bottom of the homepage, while pages like this one mostly pointed at other pages. TPGMS now has somewhere to introduce itself.",
+          before: {
+            src: tpgmsAboutBefore,
+            alt: "Original TPGMS internet marketing page, mostly links to other service pages",
+          },
+          after: {
+            src: tpgmsAboutAfter,
+            alt: "Redesigned TPGMS about page introducing the team",
+          },
+        },
+        {
+          label: "Contact",
+          note:
+            "The form worked, but it sat under another word-cloud banner with every field stretched full width down the page. The new one pairs fields inside a single card and gives the send button real visual weight.",
+          before: {
+            src: tpgmsContactBefore,
+            alt: "Original TPGMS contact page with full-width stacked form fields",
+          },
+          after: {
+            src: tpgmsContactAfter,
+            alt: "Redesigned TPGMS contact page with a paired-field form card",
+          },
         },
       ],
       sections: [

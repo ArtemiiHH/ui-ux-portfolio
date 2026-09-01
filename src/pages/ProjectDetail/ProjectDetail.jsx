@@ -19,6 +19,35 @@ function GalleryImage({ src, alt, delay }) {
   );
 }
 
+function BeforeAfterRow({ label, note, before, after, delay }) {
+  const [ref, isVisible] = useScrollReveal();
+  return (
+    <article
+      ref={ref}
+      className={`reveal ${isVisible ? "isVisible" : ""} ${styles.baRow}`}
+      style={{ transitionDelay: isVisible ? `${delay}ms` : "0ms" }}
+    >
+      <div className={styles.baText}>
+        <h3 className={styles.baLabel}>{label}</h3>
+        <p className={styles.baNote}>{note}</p>
+      </div>
+
+      <div className={styles.baPair}>
+        <figure className={styles.baFigure}>
+          <img src={before.src} alt={before.alt} loading="lazy" />
+          <figcaption className={styles.baBadge}>Before</figcaption>
+        </figure>
+        <figure className={styles.baFigure}>
+          <img src={after.src} alt={after.alt} loading="lazy" />
+          <figcaption className={`${styles.baBadge} ${styles.baBadgeAfter}`}>
+            After
+          </figcaption>
+        </figure>
+      </div>
+    </article>
+  );
+}
+
 function ContentSection({ heading, paragraphs, list, delay }) {
   const [ref, isVisible] = useScrollReveal();
   return (
@@ -88,6 +117,15 @@ export default function ProjectDetail() {
 
         <section className={styles.gallerySection}>
           <div className={styles.inner}>
+            {page.galleryHeading && (
+              <div className={styles.sectionIntro}>
+                <h2 className={styles.sectionHeading}>{page.galleryHeading}</h2>
+                {page.galleryIntro && (
+                  <p className={styles.sectionLede}>{page.galleryIntro}</p>
+                )}
+              </div>
+            )}
+
             <div
               className={
                 page.gallery.length === 1
@@ -106,6 +144,31 @@ export default function ProjectDetail() {
             </div>
           </div>
         </section>
+
+        {page.beforeAfter?.length > 0 && (
+          <section className={styles.baSection}>
+            <div className={styles.inner}>
+              <div className={styles.sectionIntro}>
+                <h2 className={styles.sectionHeading}>
+                  {page.beforeAfterHeading ?? "Before & After"}
+                </h2>
+                {page.beforeAfterIntro && (
+                  <p className={styles.sectionLede}>{page.beforeAfterIntro}</p>
+                )}
+              </div>
+
+              <div className={styles.baList}>
+                {page.beforeAfter.map((item, index) => (
+                  <BeforeAfterRow
+                    key={item.label}
+                    {...item}
+                    delay={index * 60}
+                  />
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         <section className={styles.contentWrap}>
           <div className={styles.contentInner}>

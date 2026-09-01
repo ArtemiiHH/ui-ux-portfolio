@@ -121,6 +121,112 @@
   aspect-ratio: 16 / 9;
 }
 
+/* Shared section intro */
+
+.sectionIntro {
+  max-width: 60ch;
+  margin-bottom: 40px;
+}
+
+.sectionHeading {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.2;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.sectionLede {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+/* Before & After */
+
+.baSection {
+  background: var(--bg-light);
+  padding: 88px 24px;
+}
+
+.baList {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.baRow {
+  background: var(--bg-muted);
+  border-radius: var(--radius-card);
+  padding: 32px;
+}
+
+.baText {
+  max-width: 68ch;
+  margin-bottom: 24px;
+}
+
+.baLabel {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-green-dark);
+  margin-bottom: 10px;
+}
+
+.baNote {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.baPair {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.baFigure {
+  position: relative;
+  margin: 0;
+  border-radius: var(--radius-card-sm);
+  overflow: hidden;
+  background: var(--bg-light);
+}
+
+.baFigure img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.baBadge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bg-light);
+  background: rgb(20 20 20 / 0.7);
+  backdrop-filter: blur(6px);
+  border-radius: var(--radius-pill);
+  padding: 5px 12px;
+}
+
+.baBadgeAfter {
+  background: var(--accent-green-dark);
+}
+
 /* Content */
 
 .contentWrap {
@@ -226,6 +332,30 @@
 
   .galleryGrid {
     grid-template-columns: 1fr;
+  }
+
+  .sectionIntro {
+    margin-bottom: 28px;
+  }
+
+  .sectionHeading {
+    font-size: 24px;
+  }
+
+  .baSection {
+    padding: 56px 20px;
+  }
+
+  .baRow {
+    padding: 20px;
+  }
+
+  .baText {
+    margin-bottom: 18px;
+  }
+
+  .baPair {
+    gap: 12px;
   }
 
   .contentWrap {
