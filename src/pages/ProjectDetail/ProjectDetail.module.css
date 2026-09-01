@@ -96,12 +96,14 @@
 .galleryGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: start;
   gap: 24px;
 }
 
 .gallerySingle {
   display: grid;
   grid-template-columns: 1fr;
+  align-items: start;
 }
 
 .galleryItem {
@@ -110,15 +112,11 @@
   background: var(--bg-light);
 }
 
+/* Size to the image's own ratio so nothing is cropped */
 .galleryItem img {
+  display: block;
   width: 100%;
-  height: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-}
-
-.gallerySingle .galleryItem img {
-  aspect-ratio: 16 / 9;
+  height: auto;
 }
 
 /* Shared section intro */

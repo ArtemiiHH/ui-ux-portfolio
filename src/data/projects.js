@@ -1,10 +1,10 @@
 import tpgmsMockup from "../public/tpgms-mockup.png";
 
 // Presentation mockups
-import mockup1 from "../public/mockup1.png";
-import mockup2 from "../public/mockup2.png";
-import mockup3 from "../public/mockup3.png";
-import mockup4 from "../public/mockup4.png";
+import mockup1 from "../public/mockup1.jpg";
+import mockup2 from "../public/mockup2.jpg";
+import mockup3 from "../public/mockup3.jpg";
+import mockup4 from "../public/mockup4.jpg";
 
 // Redesigned site
 import tpgmsLandingAfter from "../public/tpgms-landing-after.png";
