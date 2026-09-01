@@ -1,5 +1,11 @@
 import tpgmsMockup from "../public/tpgms-mockup.png";
 
+// Presentation mockups
+import mockup1 from "../public/mockup1.png";
+import mockup2 from "../public/mockup2.png";
+import mockup3 from "../public/mockup3.png";
+import mockup4 from "../public/mockup4.png";
+
 // Redesigned site
 import tpgmsLandingAfter from "../public/tpgms-landing-after.png";
 import tpgmsServicesAfter from "../public/Services.png";
@@ -34,23 +40,23 @@ export const projects = [
       tools: "Figma",
       galleryHeading: "The New Site",
       galleryIntro:
-        "Four screens from the redesigned marketing site \u2014 homepage, services, about, and contact.",
+        "Four screens from the redesigned marketing site \u2014 homepage, services, and about.",
       gallery: [
         {
-          src: tpgmsLandingAfter,
-          alt: "TPGMS redesigned homepage",
+          src: mockup1,
+          alt: "Redesigned TPGMS homepage hero in a browser window",
         },
         {
-          src: tpgmsServicesAfter,
-          alt: "TPGMS redesigned services page",
+          src: mockup2,
+          alt: "Redesigned TPGMS services page shown at an angle",
         },
         {
-          src: tpgmsAboutAfter,
-          alt: "TPGMS redesigned about us page",
+          src: mockup3,
+          alt: "Redesigned TPGMS about page introducing the team",
         },
         {
-          src: tpgmsContactAfter,
-          alt: "TPGMS redesigned contact page",
+          src: mockup4,
+          alt: "Close-up of the numbered service cards on the redesigned services page",
         },
       ],
       beforeAfterHeading: "Before & After",
