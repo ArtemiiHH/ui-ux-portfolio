@@ -1,5 +1,5 @@
 .section {
-  padding: 112px 24px;
+  padding: 92px 24px;
 }
 
 .inner {
@@ -9,11 +9,11 @@
 
 .card {
   display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: 56px;
+  grid-template-columns: 300px 1fr;
+  gap: 44px;
   background: var(--accent-green-dark);
   border-radius: var(--radius-card);
-  padding: 56px;
+  padding: 44px;
   align-items: center;
 }
 
@@ -23,6 +23,7 @@
 
 .portrait {
   width: 100%;
+  max-width: 300px;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   border-radius: var(--radius-card-sm);
@@ -30,10 +31,10 @@
 
 .badge {
   position: absolute;
-  top: -18px;
-  left: -18px;
-  width: 52px;
-  height: 52px;
+  top: -14px;
+  left: -14px;
+  width: 44px;
+  height: 44px;
   border-radius: var(--radius-pill);
   background: #ffffff;
   display: flex;
@@ -60,23 +61,23 @@
 .heading {
   font-family: var(--font-body);
   font-weight: 700;
-  font-size: 34px;
-  margin-bottom: 22px;
+  font-size: 30px;
+  margin-bottom: 18px;
 }
 
 .paragraph {
   font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.7;
+  font-size: 15px;
+  line-height: 1.65;
   color: rgb(255 255 255 / 0.9);
   max-width: 52ch;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .ctaButton {
   display: inline-flex;
   align-items: center;
-  margin-top: 12px;
+  margin-top: 8px;
   font-family: var(--font-body);
   font-weight: 700;
   font-size: 13px;
@@ -85,7 +86,7 @@
   color: var(--text-dark);
   background: var(--accent-orange);
   border-radius: var(--radius-pill);
-  padding: 16px 32px;
+  padding: 14px 28px;
   white-space: nowrap;
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
     box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
@@ -98,26 +99,26 @@
 
 @media (max-width: 768px) {
   .section {
-    padding: 72px 20px;
+    padding: 64px 20px;
   }
 
   .card {
     grid-template-columns: 1fr;
-    gap: 40px;
-    padding: 32px;
+    gap: 32px;
+    padding: 28px;
   }
 
   .portrait {
-    max-width: 320px;
+    max-width: 260px;
     margin: 0 auto;
   }
 
   .badge {
-    top: -14px;
-    left: -14px;
+    top: -12px;
+    left: -12px;
   }
 
   .heading {
-    font-size: 28px;
+    font-size: 25px;
   }
 }
