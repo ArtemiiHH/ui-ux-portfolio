@@ -26,16 +26,10 @@ export default function AboutSection() {
             <span className={styles.eyebrow}>Behind the work</span>
             <h2 className={styles.heading}>About me</h2>
             <p className={styles.paragraph}>
-              I am a UI/UX Designer based in Limassol, Cyprus, working with startups and
-              small teams to turn rough ideas into interfaces people actually
-              enjoy using. Most of my time goes into fintech and wellness
-              products, though I take on a brand project when the fit feels
-              right.
+              I'm a UI/UX Designer based in Limassol, Cyprus. I love designing and building my own digital products, mostly because I can't resist a good UI. There's something satisfying about getting the details right, from how the interface looks – down to the code.
             </p>
             <p className={styles.paragraph}>
-              I care about the parts most people skip: empty states, loading
-              moments, the third click. Good design shows up in those details as
-              much as it does in the hero shot.
+              Outside of work, I trade the screen for the gym, I also love boxing, running, camping and hiking.
             </p>
             <a href="#contact" className={styles.ctaButton}>
               View CV
