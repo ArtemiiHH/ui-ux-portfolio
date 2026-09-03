@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100">
+  <defs>
+    <pattern id="dots" width="34" height="34" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="2" fill="#e2e2e2" />
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="1100" fill="#f2f2f2" />
+  <rect width="1600" height="1100" fill="url(#dots)" />
+
+  <circle cx="800" cy="430" r="120" fill="#7fa88e" />
+  <g transform="translate(800 430)">
+    <circle cx="0" cy="0" r="66" fill="none" stroke="#ffffff" stroke-width="8" />
+    <line x1="0" y1="0" x2="0" y2="-38" stroke="#ffffff" stroke-width="8" stroke-linecap="round" />
+    <line x1="0" y1="0" x2="26" y2="14" stroke="#ffffff" stroke-width="8" stroke-linecap="round" />
+  </g>
+
+  <text x="800" y="640" text-anchor="middle" font-family="Poppins, 'Segoe UI', sans-serif" font-weight="700" font-size="56" fill="#141414">Coming Soon</text>
+  <text x="800" y="694" text-anchor="middle" font-family="Poppins, 'Segoe UI', sans-serif" font-weight="500" font-size="26" fill="#6b6b6b">New case study in progress</text>
+</svg>

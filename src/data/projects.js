@@ -1,4 +1,6 @@
 import tpgmsMockup from "../public/tpgms-mockup.png";
+import flowDiagram from "../public/flow-diagram.png";
+import comingSoon from "../public/coming-soon.svg";
 
 // Presentation mockups
 import mockup1 from "../public/mockup1.jpg";
@@ -177,8 +179,8 @@ export const projects = [
       subtitle:
         "Watching real traders use the platform to uncover what helps them — and what gets in their way.",
       tags: ["UX Research", "Case Study", "Usability Testing", "Fintech"],
-      image: tpgmsMockup,
-      alt: "XM trading platform usability testing case study cover",
+      image: flowDiagram,
+      alt: "Trade placement user flow diagram from the XM usability testing sessions",
       featured: false,
     },
     page: {
@@ -188,11 +190,11 @@ export const projects = [
         "A structured usability study identifying friction points and enablers in one of XM's core trading platforms — translated into UI recommendations that were implemented.",
       role: "UI/UX Designer, part of the research team",
       timeline: "4 weeks",
-      tools: "Lookback, Figma, Notion",
+      tools: "FigJam, UserTesting, Gemini",
       gallery: [
         {
-          src: "https://picsum.photos/seed/xm-case-study/1400/800",
-          alt: "XM trading platform usability testing session overview",
+          src: flowDiagram,
+          alt: "Trade placement user flow diagram mapping observed friction points and outcomes",
         },
       ],
       sections: [
@@ -264,8 +266,8 @@ export const projects = [
       title: "New Project — Coming Soon",
       subtitle: "A new project currently in progress.",
       tags: ["Coming Soon"],
-      image: tpgmsMockup,
-      alt: "Placeholder mockup for an upcoming project",
+      image: comingSoon,
+      alt: "Coming soon placeholder for an upcoming project",
       featured: false,
     },
     page: {
