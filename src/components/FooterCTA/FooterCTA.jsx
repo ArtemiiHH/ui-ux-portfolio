@@ -1,5 +1,6 @@
 import styles from "./FooterCTA.module.css";
 import avatarImage from "../../public/profile-avatar-with-bg.png";
+import cvFile from "../../public/cv-artemii-barashkov-product-designer.pdf";
 
 const SOCIALS = [
   { label: "LinkedIn", href: "https://linkedin.com" },
@@ -31,7 +32,7 @@ export default function FooterCTA() {
 
         <div className={styles.linksRow}>
           <a
-            href="/resume.pdf"
+            href={cvFile}
             target="_blank"
             rel="noreferrer"
             className={styles.viewCv}

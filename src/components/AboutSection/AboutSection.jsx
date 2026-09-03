@@ -2,6 +2,7 @@ import { Palette } from "lucide-react";
 import useScrollReveal from "../../hooks/useScrollReveal.js";
 import styles from "./AboutSection.module.css";
 import aboutImage from "../../public/about-image-compressed.jpg";
+import cvFile from "../../public/cv-artemii-barashkov-product-designer.pdf";
 
 export default function AboutSection() {
   const [ref, isVisible] = useScrollReveal();
@@ -31,7 +32,12 @@ export default function AboutSection() {
             <p className={styles.paragraph}>
               Outside of work, I trade the screen for the gym, I also love boxing, running, camping and hiking.
             </p>
-            <a href="#contact" className={styles.ctaButton}>
+            <a
+              href={cvFile}
+              target="_blank"
+              rel="noreferrer"
+              className={styles.ctaButton}
+            >
               View CV
             </a>
           </div>
